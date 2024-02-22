@@ -1,1 +1,1 @@
-# KodeKloud Kuberenetes Tutorial
+# KodeKloud Kubernetes Tutorial
