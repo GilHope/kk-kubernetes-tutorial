@@ -8,3 +8,14 @@
 
 4. kubectl get pods
 
+## Delete Deployment (and all associated resources)
+
+1. kubectl delete deployment myapp-deployment
+
+2. Verify with:
+
+- kubectl get deployments
+
+- kubectl get replicasets
+
+- kubectl get pods
