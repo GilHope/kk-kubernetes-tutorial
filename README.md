@@ -46,6 +46,9 @@ To Delete a Deployment
 
 ## To View Infrastructure
 
+To View Nodes
+- kubectl get nodes
+
 To View Pods
 - kubectl get pods
 
