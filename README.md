@@ -60,3 +60,8 @@ To View Deployments
 
 To View All
 - kubectl get all
+
+# Display The State of Resources
+
+To see details about a particular node
+`kubectl describe nodes [node-name]`
