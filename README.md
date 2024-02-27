@@ -40,3 +40,6 @@ To Check the Status of a Deployment
 
 To Rollback a Deployment
 - kubectl rollout undo deployment/example-deployment
+
+To Delete a Deployment
+- kubectl delete deployment example-deployment
