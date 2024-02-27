@@ -44,7 +44,7 @@ To Rollback a Deployment
 To Delete a Deployment
 - kubectl delete deployment example-deployment
 
-## To View Infrastructure
+# Listing Resources
 
 To View Nodes
 - kubectl get nodes
@@ -63,5 +63,22 @@ To View All
 
 # Display The State of Resources
 
+To see details about a specific pods
+`kubectl describe pods/[pod-name]`
+
+To see details about all pods
+`kubectl describe pods`
+
 To see details about a particular node
 `kubectl describe nodes [node-name]`
+
+To see details about a particular pod
+`kubectl describe pods [pod-name]`
+
+# Delete Resources
+
+To delete a pod using the type and name  specififed in the pod
+
+To delete all pods, including uninitialized ones
+`kubectl delete pods --all`
+
