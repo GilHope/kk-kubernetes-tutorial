@@ -43,3 +43,17 @@ To Rollback a Deployment
 
 To Delete a Deployment
 - kubectl delete deployment example-deployment
+
+## To View Infrastructure
+
+To View Pods
+- kubectl get pods
+
+To View Replicasets
+- kubectl get replicaset
+
+To View Deployments
+- kubectl get depoyments
+
+To View All
+- kubectl get all
