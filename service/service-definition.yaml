@@ -12,11 +12,22 @@ spec:
     app: myapp
 
 
-# See line 6...
+# Notes regarding line 6...
 # In K8s, services are defined to provide a method of communication with a set of pods. 
 # The services abstract the way pods are accessed so that the network details remain hidden.
 # The main types of service definitions are ClusterIP, NodePort, and LoadBalancer.
-#   - ClusterIP is the default service type and is used to expose the service on a cluster-internal IP.
+#   - ClusterIP is the DEFAULT SERVICE TYPE and is used to expose the service on a cluster-internal IP.
 #   - NodePort is used to expose the service on each node's IP at a static port.
 #   - LoadBalancer is used to expose the service externally using a cloud provider's load balancer.
 # Reference: https://kubernetes.io/docs/concepts/services-networking/service/
+
+# From the commandline, to inspect the details of a specific service in your Kubernetes cluster, use the kubectl describe command followed by service or its abbreviation svc, and the name of your service. 
+# For example:
+#   - ```kubectl describe service myapp-service``` or ```kubectl describe svc myapp-service``
+# The output will show the service's type, the ports it is listening on, and the selector used to determine which pods the service is forwarding traffic to.
+# Reference: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe
+
+# To apply a new service definition inside the commandline, use the kubectl apply command followed by the -f flag and the name of the service definition file.
+# For example:
+#   - ```kubectl apply -f service-definition.yaml```
+# Reference: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply
