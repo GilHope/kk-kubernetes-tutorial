@@ -10,3 +10,10 @@ spec:
       nodePort: 30004
   selector:
     app: myapp
+
+# In K8s, services are defined to provide a method of communication with a set of pods. 
+# The services abstract the way pods are accessed so that the network details remain hidden.
+# The main types of service definitions are ClusterIP, NodePort, and LoadBalancer.
+#   - ClusterIP is the default service type and is used to expose the service on a cluster-internal IP.
+#   - NodePort is used to expose the service on each node's IP at a static port.
+#   - LoadBalancer is used to expose the service externally using a cloud provider's load balancer.
