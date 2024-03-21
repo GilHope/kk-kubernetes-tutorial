@@ -82,3 +82,37 @@ To delete a pod using the type and name  specififed in the pod
 To delete all pods, including uninitialized ones
 `kubectl delete pods --all`
 
+## Taints
+
+To Check for Taints on a Node:
+`kubectl describe node <node-name> | grep -i taint`
+Using grep in this way will output just the line pertaining to the word being searched, this case 'taint'.
+
+To add a taint to a node:
+`kubectl taint nodes <node-name> <taint-key>=<key-value>:<effect>`
+
+To remove a taint from a node:
+`kubectl taint nodes <node-name> <taint_key>=<value>:<effect>-`
+
+## Node Selectors
+
+Under spec section.
+
+Node selectors are used to determine whihc nodes should run a particular pod. They allow you to constrain which nodes your pod is eligable to be scheduled on based on labels assigned to nodes.
+
+Node selectors rely on labels assigned to the nodes. Labels are key-value pairs attached to K8s objects, inlcuding nodes. These can be named anything you desire.
+
+When you define a pod, you can specify a node selector that includes a set of labels and their corresponding values. This selector defines the criteria by which a node must meet in order for that pod to be scheduled on it.
+
+when K8s schedules a pod, it looks for nodes which satisfy the criteria specified in the pod's node selector. If the node's label matches the selector then the pod is scheduled on that node.
+
+To label a node from the commandline:
+`kubectl label nodes <node-name> <label-key>=<label-value>`
+
+## Node Affinity
+
+Node affinity is a concept in K8s that allows you to constrain whihc nodes your pod is eligable to be scheduled on based on labels or other node attributes. In doing so you are able to influence the scheduling of pods onto specific nodes that meet the criteria.
+
+Node affinity consists of two main components: Node Selectors and Node Affinity Rules.
+
+
